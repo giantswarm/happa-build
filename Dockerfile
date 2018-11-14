@@ -4,10 +4,12 @@ RUN apt-get update && \
     apt-get install -y build-essential python git-core && \
     rm -rf /var/lib/apt/lists/*
 
-WORKDIR /usr/src/app
+# Install latest version of yarn
+RUN curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+RUN yarn --version
 
-# pre-install some dependencies that take long to build
-RUN yarn add node-sass@4.9.4
+WORKDIR /usr/src/app
 
 # CLI tools are installed via 'npm install -g'
 RUN npm install -g grunt@1.0.3
+

@@ -11,5 +11,5 @@ RUN yarn --version
 WORKDIR /usr/src/app
 
 # CLI tools are installed via 'npm install -g'
-RUN npm install -g grunt@1.0.3
+RUN npm install -g grunt@1.0.4
 

@@ -1,5 +1,8 @@
 FROM node:10-slim
 
+# Modify this string to enforce an update
+ENV VERSION 2019-06-05
+
 RUN apt-get update && \
     apt-get install -y build-essential python git-core && \
     rm -rf /var/lib/apt/lists/*

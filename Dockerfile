@@ -1,7 +1,7 @@
 FROM node:10-slim
 
 # Modify this string to enforce an update
-ENV VERSION 2019-06-05
+ENV VERSION 2019-06-11
 
 RUN apt-get update && \
     apt-get install -y build-essential python git-core && \
@@ -15,4 +15,4 @@ WORKDIR /usr/src/app
 
 # CLI tools are installed via 'npm install -g'
 RUN npm install -g grunt@1.0.4
-
+RUN npm install -g prettier@1.18.2

@@ -14,5 +14,5 @@ RUN yarn --version
 WORKDIR /usr/src/app
 
 # CLI tools are installed via 'npm install -g'
-RUN npm install -g grunt@1.0.4
+RUN npm install -g webpack@4.32.2 webpack-cli@3.3.5
 RUN npm install -g prettier@1.18.2
